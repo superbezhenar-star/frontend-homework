@@ -204,3 +204,7 @@ box-shadow: 0 8px 16px 0 rgb(201, 129, 213), 0 6px 20px 0 rgb(45, 25, 25);
  background-image: linear-gradient(to bottom right, rgb(121, 50, 233), rgb(83, 22, 77));
 box-shadow: 0 8px 16px 0 rgb(255, 255, 255), 0 6px 20px 0 rgb(255, 255, 255);
   color: white;}
+  .div-column p{
+    font-size: 18px;
+    font-weight: 600;
+  }
