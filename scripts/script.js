@@ -45,3 +45,29 @@ for(let i=0; i<=times; i+=2){
     item.textContent = "ciclu for ruleaza pentru "+i+"oara"
     listaMea.appendChild(item)
 }
+const VALID_CARDNAME= 'Ivanov  Ivan'
+const VALID_CARDNUMBER= '5545676789091111'
+const VALID_CCV="675"
+function paymentsuccess(cardname,cardnumber,ccv){
+    if(cardname===VALID_CARDNAME && cardnumber ===VALID_CARDNUMBER && ccv===VALID_CCV){
+        console.log('Payment successful,thank you for your order')
+        return true;
+    }
+if(cardname!==VALID_CARDNAME ){
+    console.log("Sorry, there is an error, try again")
+    return false;
+}
+if(cardnumber !==VALID_CARDNUMBER){
+    console.log("Sorry, there is an error in your payment, try again !")
+    return false;
+}
+if(ccv !==VALID_CCV){
+    console.log("Sorry, there is an error in your payment, try again !")
+    return false;
+}
+} 
+ 
+
+let result= paymentsuccess('Ivanov  Ivan','5545676789091111',"675") //'Payment successful,thank you for your order'
+
+
