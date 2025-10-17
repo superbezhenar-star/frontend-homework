@@ -1,4 +1,4 @@
-alert("HEELLO I AM JS") //comentariu chemarea functiei
+
 //HEELLO I AM JS-parametrul ftiei
 console.log("si eu sunt in consola")
 let a = "3"
@@ -71,3 +71,93 @@ if(ccv !==VALID_CCV){
 let result= paymentsuccess('Ivanov  Ivan','5545676789091111',"675") //'Payment successful,thank you for your order'
 
 
+let cosdecumparaturi= ['mere']
+console.log(cosdecumparaturi)
+
+//FUNCTIA ADAUGARE IN COS ALTE FRUCTE
+//'banane','capsune','piersici' ceea ce vreau sa adaug  
+function addtocart(fructul){
+cosdecumparaturi.push(fructul)
+console.log(`${fructul} adaugat cu succes`)
+}
+
+addtocart('banane')
+console.log(cosdecumparaturi)
+addtocart('capsune')
+console.log(cosdecumparaturi)
+addtocart('piersici')
+console.log(cosdecumparaturi)
+
+//FUNCTIA PREZINTA COSUL
+function showCart() {
+    if (cosdecumparaturi.length === 0){
+        console.log('Cosul este gol!')
+    return}
+    console.log('Ati adaugat urmatoarele fructe in cos:')
+    for(let fructul of cosdecumparaturi){
+        console.log(`${fructul}`)
+    }
+}
+
+showCart(cosdecumparaturi)
+
+//FUNCTIA care elimina dIN  FRUCTE
+function removeLastFromcart(){
+if (cosdecumparaturi.length === 0){
+        console.log('Cosul este gol!')
+    return}
+    let removed = cosdecumparaturi.pop()
+console.log(`${removed} este inlaturat din cos`)
+}
+
+removeLastFromcart()
+showCart(cosdecumparaturi)
+removeLastFromcart()
+showCart(cosdecumparaturi)
+
+addtocart('ananas')
+
+console.log(cosdecumparaturi)
+
+
+let pret = {
+  mere: 10,
+  pere: 12,
+  ananas: 8,
+  banane: 9,
+  capsune: 15,
+  piersici:290
+}
+
+
+function calculateTotal() {
+  if (cosdecumparaturi.length === 0) {
+    console.log('Coșul este gol!');
+    return;
+  }
+
+  let total = 0;
+
+  for (let fructul of cosdecumparaturi) {
+    total += pret[fructul]; // берем цену по имени фрукта
+  }
+
+  console.log(`💰 Spre achitare: ${total} lei`);
+}
+calculateTotal()
+console.log(cosdecumparaturi)
+removeLastFromcart()
+calculateTotal()
+addtocart('piersici')
+
+
+
+//functia checkuire la cos de cumparaturi
+
+function checkcos(){
+    calculateTotal()
+    console.log('Plata efectuata cu succes')
+    cosdecumparaturi = []
+}
+checkcos()
+console.log(cosdecumparaturi)
