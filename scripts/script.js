@@ -197,6 +197,7 @@ aratamicelegumeamincos(cosdelegume)
 
 function calculeazamisumatotata(){
     let sum=0
+    if (cosdelegume.length===0){console.log('nu ati adaugat nimic in cos')}
     for(let legume of cosdelegume){
         sum+=pret[legume]
     }
@@ -232,12 +233,33 @@ calculeazamisumatotata(cosdelegume)
 
 
 function golestecosul(){
-    if (cosdelegume.length===0)
-        console.log('cosul este gol')
-    else  (cosdelegume=[])
-    console.log('ati efectuat plata cu succes')
-  console.log(cosdelegume)
-    }
-    
-golestecosul(cosdelegume)
+    if (cosdelegume.length===0){
+        console.log('cosul este gol')}
+    else {
 
+    (cosdelegume=[])
+    console.log('ati efectuat plata cu succes')
+  console.log(cosdelegume)}
+    }
+    document.getElementById('achitare').addEventListener('click', golestecosul)
+
+golestecosul(cosdelegume)
+golestecosul(cosdelegume)
+adaugalegumeincos('dovlecel')
+adaugalegumeincos('vanata')
+adaugalegumeincos('cartofi')
+adaugalegumeincos('castraveti')
+adaugalegumeincos('morcov')
+adaugalegumeincos('ceapa')
+aratamicelegumeamincos(cosdelegume)
+calculeazamisumatotata(cosdelegume)
+golestecosul(cosdelegume)
+calculeazamisumatotata(cosdelegume)
+adaugalegumeincos('dovlecel')
+adaugalegumeincos('vanata')
+adaugalegumeincos('cartofi')
+adaugalegumeincos('castraveti')
+adaugalegumeincos('morcov')
+adaugalegumeincos('ceapa')
+aratamicelegumeamincos(cosdelegume)
+calculeazamisumatotata(cosdelegume)
