@@ -71,12 +71,12 @@ if(ccv !==VALID_CCV){
 let result= paymentsuccess('Ivanov  Ivan','5545676789091111',"675") //'Payment successful,thank you for your order'
 
 
-let cosdecumparaturi= ['mere']
+/*let cosdecumparaturi= ['mere']
 console.log(cosdecumparaturi)
 
 //FUNCTIA ADAUGARE IN COS ALTE FRUCTE
 //'banane','capsune','piersici' ceea ce vreau sa adaug  
-function addtocart(fructul){
+function addtocart(fructul)
 cosdecumparaturi.push(fructul)
 console.log(`${fructul} adaugat cu succes`)
 }
@@ -152,7 +152,7 @@ addtocart('piersici')
 
 
 
-//functia checkuire la cos de cumparaturi
+//functia checkuire la cos de cumparaturi щи голире кош
 
 function checkcos(){
     calculateTotal()
@@ -160,4 +160,84 @@ function checkcos(){
     cosdecumparaturi = []
 }
 checkcos()
-console.log(cosdecumparaturi)
+console.log(cosdecumparaturi)*/
+
+
+let cosdelegume=[]
+let legume= ['morcov','cartofi','castraveti','rosii','ciuperci','vanata','dovlecel','ceapa']
+console.log(legume)
+let pret = {morcov:33,
+cartofi:18,
+castraveti:25,
+rosii:76,
+ciuperci:64,
+vanata:45,
+dovlecel:98,
+ceapa:13
+}
+console.log(pret)
+
+function adaugalegumeincos(legume){
+   cosdelegume.push(legume)
+    console.log(`Ati adaugat cu succes ${legume}`)
+}
+
+adaugalegumeincos('morcov')
+adaugalegumeincos('rosii')
+
+function aratamicelegumeamincos(){
+    console.log('ati adaugat urmatoarele legume in cos:')
+    for (let legume of cosdelegume){
+        console.log(`${legume}`)
+    }
+}
+aratamicelegumeamincos(cosdelegume)
+adaugalegumeincos('ciuperci')
+aratamicelegumeamincos(cosdelegume)
+
+function calculeazamisumatotata(){
+    let sum=0
+    for(let legume of cosdelegume){
+        sum+=pret[legume]
+    }
+    console.log(`suma toatala este: ${sum} lei`)}
+
+calculeazamisumatotata(cosdelegume)
+adaugalegumeincos('vanata')
+calculeazamisumatotata(cosdelegume)
+aratamicelegumeamincos(cosdelegume)
+
+
+
+function stergeultimaleguma(){
+    let legumastearsa = cosdelegume.pop()
+    console.log(`${legumastearsa} este inlaturata din cos`)
+}
+stergeultimaleguma(cosdelegume)
+stergeultimaleguma(cosdelegume)
+stergeultimaleguma(cosdelegume)
+stergeultimaleguma(cosdelegume)
+console.log(cosdelegume)
+
+adaugalegumeincos('dovlecel')
+adaugalegumeincos('vanata')
+adaugalegumeincos('cartofi')
+adaugalegumeincos('castraveti')
+adaugalegumeincos('morcov')
+adaugalegumeincos('ceapa')
+calculeazamisumatotata(cosdelegume)
+aratamicelegumeamincos(cosdelegume)
+stergeultimaleguma(cosdelegume)
+calculeazamisumatotata(cosdelegume)
+
+
+function golestecosul(){
+    if (cosdelegume.length===0)
+        console.log('cosul este gol')
+    else  (cosdelegume=[])
+    console.log('ati efectuat plata cu succes')
+  console.log(cosdelegume)
+    }
+    
+golestecosul(cosdelegume)
+
