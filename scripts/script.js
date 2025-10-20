@@ -177,23 +177,24 @@ ceapa:13
 }
 console.log(pret)
 
-function adaugalegumeincos(legume){
-   cosdelegume.push(legume)
-    console.log(`Ati adaugat cu succes ${legume}`)
+function adaugalegumeincos(l){
+   cosdelegume.push(l)
+    console.log(`Ati adaugat cu succes ${l}`)
 }
 
 adaugalegumeincos('morcov')
 adaugalegumeincos('rosii')
 
 function aratamicelegumeamincos(){
+    if (cosdelegume.length===0){console.log('nu ati adaugat nimic in cos')}
     console.log('ati adaugat urmatoarele legume in cos:')
-    for (let legume of cosdelegume){
-        console.log(`${legume}`)
+    for (let l of cosdelegume){
+        console.log(`${l}`)
     }
 }
-aratamicelegumeamincos(cosdelegume)
+aratamicelegumeamincos()
 adaugalegumeincos('ciuperci')
-aratamicelegumeamincos(cosdelegume)
+aratamicelegumeamincos()
 
 function calculeazamisumatotata(){
     let sum=0
@@ -203,10 +204,10 @@ function calculeazamisumatotata(){
     }
     console.log(`suma toatala este: ${sum} lei`)}
 
-calculeazamisumatotata(cosdelegume)
+calculeazamisumatotata()
 adaugalegumeincos('vanata')
-calculeazamisumatotata(cosdelegume)
-aratamicelegumeamincos(cosdelegume)
+calculeazamisumatotata()
+aratamicelegumeamincos()
 
 
 
@@ -214,22 +215,22 @@ function stergeultimaleguma(){
     let legumastearsa = cosdelegume.pop()
     console.log(`${legumastearsa} este inlaturata din cos`)
 }
-stergeultimaleguma(cosdelegume)
-stergeultimaleguma(cosdelegume)
-stergeultimaleguma(cosdelegume)
-stergeultimaleguma(cosdelegume)
+stergeultimaleguma()
+stergeultimaleguma()
+stergeultimaleguma()
+stergeultimaleguma()
 console.log(cosdelegume)
 
-adaugalegumeincos('dovlecel')
-adaugalegumeincos('vanata')
-adaugalegumeincos('cartofi')
-adaugalegumeincos('castraveti')
-adaugalegumeincos('morcov')
-adaugalegumeincos('ceapa')
-calculeazamisumatotata(cosdelegume)
-aratamicelegumeamincos(cosdelegume)
-stergeultimaleguma(cosdelegume)
-calculeazamisumatotata(cosdelegume)
+// adaugalegumeincos('dovlecel')
+// adaugalegumeincos('vanata')
+// adaugalegumeincos('cartofi')
+// adaugalegumeincos('castraveti')
+// adaugalegumeincos('morcov')
+// adaugalegumeincos('ceapa')
+// calculeazamisumatotata()
+// aratamicelegumeamincos()
+// stergeultimaleguma()
+// calculeazamisumatotata()
 
 
 function golestecosul(){
@@ -243,23 +244,35 @@ function golestecosul(){
     }
     document.getElementById('achitare').addEventListener('click', golestecosul)
 
-golestecosul(cosdelegume)
-golestecosul(cosdelegume)
-adaugalegumeincos('dovlecel')
-adaugalegumeincos('vanata')
-adaugalegumeincos('cartofi')
-adaugalegumeincos('castraveti')
-adaugalegumeincos('morcov')
-adaugalegumeincos('ceapa')
-aratamicelegumeamincos(cosdelegume)
-calculeazamisumatotata(cosdelegume)
-golestecosul(cosdelegume)
-calculeazamisumatotata(cosdelegume)
-adaugalegumeincos('dovlecel')
-adaugalegumeincos('vanata')
-adaugalegumeincos('cartofi')
-adaugalegumeincos('castraveti')
-adaugalegumeincos('morcov')
-adaugalegumeincos('ceapa')
-aratamicelegumeamincos(cosdelegume)
-calculeazamisumatotata(cosdelegume)
+// golestecosul()
+// golestecosul()
+// adaugalegumeincos('dovlecel')
+// adaugalegumeincos('vanata')
+// adaugalegumeincos('cartofi')
+// adaugalegumeincos('castraveti')
+// adaugalegumeincos('morcov')
+// adaugalegumeincos('ceapa')
+// aratamicelegumeamincos()
+// calculeazamisumatotata()
+// golestecosul()
+// calculeazamisumatotata()
+// adaugalegumeincos('dovlecel')
+// adaugalegumeincos('vanata')
+// adaugalegumeincos('cartofi')
+// adaugalegumeincos('castraveti')
+// adaugalegumeincos('morcov')
+// adaugalegumeincos('ceapa')
+// aratamicelegumeamincos()
+// calculeazamisumatotata()
+// aratamicelegumeamincos()
+//aratamicelegumeamincos()
+
+let pet ={
+    name: "bella",
+    type: "dog",
+    age:4,
+    sound:"woof woof",
+    makeSound:function(){
+        console.log(this.sound)
+    }
+}
