@@ -163,7 +163,7 @@ checkcos()
 console.log(cosdecumparaturi)*/
 
 
-let cosdelegume=[]
+/*let cosdelegume=[]
 let legume= ['morcov','cartofi','castraveti','rosii','ciuperci','vanata','dovlecel','ceapa']
 console.log(legume)
 let pret = {morcov:33,
@@ -242,7 +242,7 @@ function golestecosul(){
     console.log('ati efectuat plata cu succes')
   console.log(cosdelegume)}
     }
-    document.getElementById('achitare').addEventListener('click', golestecosul)
+    document.getElementById('achitare').addEventListener('click', golestecosul)*/
 
 // golestecosul()
 // golestecosul()
@@ -267,12 +267,82 @@ function golestecosul(){
 // aratamicelegumeamincos()
 //aratamicelegumeamincos()
 
-let pet ={
-    name: "bella",
-    type: "dog",
-    age:4,
-    sound:"woof woof",
-    makeSound:function(){
-        console.log(this.sound)
+
+
+
+
+// 5 functii 1 sa arate ce fructe am in cos
+// 2 sa adauge in cos
+// 3 calculeze suma toatala
+//4 sa goleasca cosul//
+//5  sa stearga ultimul elemenrt
+
+
+
+let cosdefructe=[]
+let fruct=['mar','banana','portocala','piersic','ananas','poama','kiwi']
+let pret ={
+    mar:20,
+    banana:50,
+    portocala:30,
+    piersic:70,
+    ananas:44,
+    poama:129,
+    kiwi:32
+}
+
+function adaaugafrincos(f){
+    cosdefructe.push(f)
+    console.log(`ati adaugat cu succes ${f}`)
+}
+
+adaaugafrincos('mar')
+adaaugafrincos("banana")
+adaaugafrincos('kiwi')
+
+
+
+function arata(){
+    if(cosdefructe.length===0){
+        console.log("nu aveti nimik in cos")
+    }else{
+    console.log('aveti in cos:')
+    for (let f of cosdefructe){
+        console.log(`${f}`)}
     }
 }
+
+arata()
+
+
+function sumeaza(){
+    let sumtot =0
+for(let f of cosdefructe){
+    sumtot+=pret[f]
+}
+    console.log(`suma totala este:${sumtot}`)
+}
+
+sumeaza()
+
+
+function elimina(){
+  let frsters = cosdefructe.pop()
+    console.log(`ati eliminat cu suycces ${frsters}`)
+}
+
+elimina()
+elimina()
+sumeaza()
+
+
+function goleste (){
+    cosdefructe=[]
+    console.log(cosdefructe)
+}
+
+goleste ()
+
+arata()
+adaaugafrincos('kiwi')
+arata()
